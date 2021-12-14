@@ -1,5 +1,4 @@
 import 'package:cpad_assignment/provider/members_provider.dart';
-import 'package:cpad_assignment/ui/screens/login/login_screen.dart';
 import 'package:cpad_assignment/provider/mom_provider.dart';
 import 'package:cpad_assignment/provider/poll_provider.dart';
 import 'package:cpad_assignment/ui/screens/splash_screen.dart';
@@ -10,6 +9,7 @@ import 'package:bot_toast/bot_toast.dart';
 import 'package:get/get.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:provider/provider.dart';
+import 'package:cpad_assignment/provider/concern_provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -38,7 +38,10 @@ class MyApp extends StatelessWidget {
         ),
         ChangeNotifierProvider(
           create: (_) => PollProvider(),
-        )
+        ),
+        ChangeNotifierProvider(
+          create: (_) => ConcernProvider(),
+        ),
       ],
       child: GetMaterialApp(
         title: 'CPAD Assignment',

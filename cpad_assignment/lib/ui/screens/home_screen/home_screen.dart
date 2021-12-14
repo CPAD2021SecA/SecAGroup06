@@ -13,6 +13,7 @@ import 'package:cpad_assignment/utility/size_config.dart';
 import 'package:flutter/material.dart';
 import 'package:bot_toast/bot_toast.dart';
 import 'package:get/get.dart';
+import 'package:cpad_assignment/ui/screens/concern_screen/concern_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -132,6 +133,16 @@ class HomeData extends StatelessWidget {
                 text: 'Polls',
                 onPressed: () {
                   Get.to(() => PollsScreen());
+                },
+              ),
+            ),
+            SizedBox(height: SizeConfig.blockSizeHorizontal * 4),
+            Container(
+              width: double.infinity,
+              child: CustomOutlineButton(
+                text: 'Concerns',
+                onPressed: () {
+                  Get.to(() => ConcernScreen());
                 },
               ),
             ),
